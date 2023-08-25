@@ -40,10 +40,9 @@ body {
 
 .main-navigation ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Displays the list items horizontally */
     gap: 20px;
 }
-
 .main-navigation a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -58,6 +57,9 @@ body {
 }
 /* Existing CSS for larger screens */
 
+    }
+    /* Additional mobile-specific styles here */
+}
 /* Media query for screens smaller than 768px (typical smartphone portrait) */
 @media (max-width: 768px) {
     body {
@@ -67,5 +69,44 @@ body {
         width: 100%; /* Make videos fill the entire width of the screen */
         height: auto; /* Maintain aspect ratio */
     }
+
+    /* Adjust the navigation bar for smaller screens */
+    .main-navigation ul {
+        display: flex;
+        flex-direction: column; /* Display the items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px;
+        background-color: #1b1919; /* Add background color for navigation */
+        position: fixed; /* Fixed position to keep it visible while scrolling */
+        top: 0; /* Position at the top of the viewport */
+        left: -100%; /* Start outside of the screen */
+        width: 70%; /* Adjust the width as needed */
+        height: 100%; /* Full height */
+        transition: left 0.3s ease-in-out; /* Add smooth transition effect */
+        padding: 40px 20px; /* Add padding for spacing */
+    }
+
+    .main-navigation.open ul {
+        left: 0; /* Show the navigation menu when open class is added */
+    }
+
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        position: fixed; /* Position at the top */
+        top: 10px;
+        right: 10px;
+        z-index: 9999; /* Ensure it's above other content */
+    }
+
+    .toggle-button span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+    }
+
     /* Additional mobile-specific styles here */
 }
