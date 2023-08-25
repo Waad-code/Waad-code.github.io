@@ -2,19 +2,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Waad Spanish</title>
+    
+    <title>Waad Spanish - Learn Spanish Online</title>
     <link rel="stylesheet" type="text/css" href="styless.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
+            background-image: url("spain-flag.jpg"); /* Add the path to your background image */
+            background-size: cover;
+            background-position: center;
             font-family: 'Montserrat', sans-serif;
-            background-color: #eecaca;
+        }
+
+        /* Semi-transparent overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by changing the last value (0.2) */
         }
 
         .site-header {
-            /* Tus estilos para el encabezado aquí */
+            /* Your header styles here */
         }
 
         .main-navigation ul {
@@ -31,58 +44,103 @@
 
         .main-navigation a {
             text-decoration: none;
-            color: #f3c8c8;
+            color: #ebbfbf;
+            
         }
 
-        .about-section {
-            padding: 80px 150px;
-            color: #a7939d; /* Color rosa */
-            text-align: justify; /* Alinear el texto */
+        .home-section {
+            text-align: center;
+            padding: 100px 0;
+            position: relative; /* Add this to create a stacking context */
+            color: #f1cece;
         }
 
-        .about-section h1 {
-            color: #7a5656;
-        }
-
-        .about-section p {
+        .home-section h2 {
             font-size: 28px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.918); /* Add shadow to the text */
+        }
 
+        .home-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    max-width: 560px; /* Set the max-width to match the video width */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.918); /* Add shadow to the text */
+}
+
+.video-container {
+    display: inline-block;
+    cursor: pointer; /* Add this to change the cursor to a pointer */
+    max-width: 560px; /* Set the max-width to match the video width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+        }
+
+        .video-description {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .video-description h3 {
+            font-size: 24px;
         }
 
         .footer {
-            /* Tus estilos para el pie de página aquí */
+            /* Your footer styles here */
         }
     </style>
 </head>
 <body>
+        <div class="toggle-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Rest of your content -->
+    
     <header class="site-header">
         <div class="logo">
-            <img src="waad_spanish_logo.png" alt="Waad Spanish Logo">
+            <img src="./waad_spanish_logo.png" alt="Waad Spanish Logo">
         </div>
+        
         <nav class="main-navigation">
-            <ul>
+            <ul>  
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="videos.html">Videos</a></li>
                 <li><a href="article1.html">Artículos</a></li>
                 <li><a href="about.html">Sobre Nosotros</a></li>
                 <li><a href="contact.html">Contacto</a></li>
-            </ul>
+             </ul>
         </nav>
     </header>
     
-    <article class="about-section">
-        <h1>Sobre Waad Spanish</h1>
-        <p>¡Bienvenido a Waad Spanish! Somos un destino en línea dedicado a ayudarte a aprender español de manera efectiva y agradable. Nuestro compromiso es brindarte una experiencia enriquecedora mientras te sumerges en el emocionante mundo del idioma español. Ya sea que estés dando tus primeros pasos en el aprendizaje o buscando perfeccionar tus habilidades existentes, Waad Spanish es el lugar ideal para ti.</p>
-        <p>Nuestro canal de YouTube es el corazón de esta comunidad. Aquí encontrarás una amplia variedad de videos diseñados para que te sientas cómodo y seguro mientras aprendes español. Desde lecciones básicas que te guiarán a través del alfabeto y la pronunciación, hasta explicaciones detalladas de la gramática y la cultura, nuestros videos están diseñados pensando en tu éxito.</p>
-        <p>En Waad Spanish, creemos que conectar con el idioma va más allá de las reglas gramaticales. Queremos que sientas la belleza y la pasión del idioma español en cada palabra que aprendas. Nuestro objetivo es proporcionarte las herramientas necesarias para comunicarte de manera fluida y segura en situaciones cotidianas y más allá.</p>
-        <p>Nuestro equipo está formado por expertos apasionados en el idioma español que se comprometen a brindarte contenido valioso y atractivo. Siempre estamos aquí para responder tus preguntas, brindarte consejos útiles y motivarte en tu viaje de aprendizaje. Nos enorgullecemos de ser parte de tu aventura de aprendizaje del español, y esperamos que te sientas inspirado para continuar aprendiendo y creciendo con nosotros.</p>
-        <p>¡Únete a nosotros en Waad Spanish y emprende tu emocionante viaje hacia la maestría del español!</p>
-    </article>
+    <main>
+        <section class="home-section">
+             <h2>¡Bienvenidos a Waad Spanish!</h2>
+            <p>Si eres un principiante en el idioma español, este páginaweb está dirigida a ti, para aprender español desde el cero de forma fácil y clara.</p>
+            <a href="https://www.youtube.com/watch?v=DkI1x6idt-Y">
+                <div class="video-container"> 
+                    <!-- Add your YouTube video embed code for the first video -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DkI1x6idt-Y" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </a>
+            <div class="video-description">
+                <h3>تعلم اللغة الأسبانية/ المستوى الأول</h3>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>&copy; 2023 Waad Spanish. Todos los derechos reservados.</p>
+        <p>&copy; 2023 Waad Spanish. All rights reserved.</p>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
