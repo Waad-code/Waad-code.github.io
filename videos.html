@@ -2,7 +2,18 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script>
+        // JavaScript code to toggle the navigation menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.toggle-button');
+            const navigation = document.querySelector('.main-navigation');
+    
+            toggleButton.addEventListener('click', () => {
+                navigation.classList.toggle('open');
+            });
+        });
+    </script>
+    
     <title>Waad Spanish - Learn Spanish Online</title>
     <link rel="stylesheet" type="text/css" href="styless.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -68,6 +79,11 @@
     <header class="site-header">
         <div class="logo">
             <img src="waad_spanish_logo.png" alt="Waad Spanish Logo">
+        </div>
+        <div class="toggle-button">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <nav class="main-navigation">
             <ul>
